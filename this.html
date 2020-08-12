@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <h1>this is not confused anymore</h1>
+    <p onclick="this.innerText= 'you clicked'">this is paragraph ,there a lots of thinks</p>
+
+    <script>
+        const myObj = {
+            name : 'hasib shiekh',
+            getfullname : function(){
+                console.log(this);
+                return 'Mr. '+ this.name;
+            }
+        }
+        // myObj.getfullname();
+
+
+        const anotherObj = {
+            name : 'siam sheikh'
+        }
+        // anotherObj.getfullname = myObj.getfullname;
+        // anotherObj.getfullname();
+        function add(a,b){
+            console.log(this);
+            return a+b;
+        }
+        add(10,20);
+        anotherObj.sum = add;
+        anotherObj.sum();
+        
+
+    </script>
+</body>
+</html>
